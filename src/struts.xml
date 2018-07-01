@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+<package name="exception" extends="struts-default">
+  <global-results>
+    <result name="sql_ex">/exception.jsp</result>
+  </global-results>
+  <global-exception-mappings>
+     <exception-mapping exception="java.sql.SQLException" result="sql_ex"/>
+  </global-exception-mappings>  
+
+   </package>
+   
+<!-- 
+<include file="action/usersinfo.xml"></include>
+
+<include file="upload/file/upload.xml"></include>
+
+<include file="validate/validates.xml"></include>
+
+<include file="sec/sec.xml"></include>
+-->
+</struts>
