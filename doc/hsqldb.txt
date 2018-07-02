@@ -1,0 +1,1 @@
+1¡¢java -classpath hsqldb.jar org.hsqldb.Server
