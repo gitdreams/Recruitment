@@ -12,16 +12,15 @@
 	<s:include value="./parent/background.jsp"></s:include>
 	<script type="text/javascript" src="../static/js/system.js"></script>
 
-	<link rel="stylesheet" type="text/css" href="//www.lgstatic.com/passport/static/pkg/pc/page/login/main.html_aio_dda183c.css" />
+	<link rel="stylesheet" type="text/css"
+		href="//www.lgstatic.com/passport/static/pkg/pc/page/login/main.html_aio_dda183c.css" />
 </head>
 <body>
 	<section class="content_box cleafix">
 	<div class="left_area fl">
-		<div class="form_head">
-			<li class="active">密码登录</li> 
-		</div>
+		<div class="form_head">密码登录</div>
 		<div>
-			<form class="active" action="javascript:;">
+			<s:form class="active">
 				<div>
 					<input type="text" class="input input_white" name=""
 						placeholder="请输入常用手机号/邮箱">
@@ -39,7 +38,7 @@
 					<input type="submit"
 						class="btn btn_green btn_active btn_block btn_lg" value="登&nbsp;录">
 				</div>
-			</form>
+			</s:form>
 		</div>
 	</div>
 	<div class="divider fl"></div>

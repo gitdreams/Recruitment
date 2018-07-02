@@ -6,10 +6,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Insert title here</title>
+<title>用户注册页面</title>
+
+	<s:include value="./parent/background.jsp"></s:include>
+	<script type="text/javascript" src="../static/js/system.js"></script>
+
+	<link rel="stylesheet" type="text/css"
+		href="//www.lgstatic.com/passport/static/pkg/pc/page/login/main.html_aio_dda183c.css" />
+		
 </head>
 <body>
-<s:include value="./parent/background.jsp"></s:include>
 
+	
+		
 </body>
 </html>
