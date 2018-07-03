@@ -32,11 +32,11 @@
 				<div class="lg_tbar_l">
 					<a rel="nofollow" href="index.jsp"
 						class="lg_app" target="_blank">网上招聘系统</a> <a rel="nofollow"
-						href="login.jsp"
+						href="company_login.jsp"
 						class="lg_os">企业入口</a>
 				</div>
 				<ul class="lg_tbar_r">
-					<li><a href="login.jsp" rel="nofollow">登录</a></li>
+					<li><a href="user_login.jsp" rel="nofollow">登录</a></li>
 					<li><a href="registration.jsp" rel="nofollow">注册</a></li>
 				</ul>
 

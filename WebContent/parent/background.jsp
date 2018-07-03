@@ -12,8 +12,7 @@
 
 </head>
 
-<link rel="Shortcut Icon"
-	href="//www.lgstatic.com/passport/static/common/static/favicon_faed927.ico" />
+<link rel="icon" href="../image/title.ico" type="image/x-icon"/>
 
 
 <!-- header/global_domain FE_base.. -->

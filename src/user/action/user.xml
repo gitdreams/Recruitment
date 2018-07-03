@@ -2,8 +2,23 @@
 <!DOCTYPE struts PUBLIC
     "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
     "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+
 <struts>
 
+	<package name="registratin" extends="struts-default">
+		
+		<action name="user_registration" class="user.action.user_registration">
+			<result name="input">/user_registration.jsp</result>
+			<result name="success">/user_login.jsp</result>
+		</action>
+		
+		<action name="company_registration" class="user.action.company_registration">
+			<result name="input">/company_registration.jsp</result>
+			<result name="success">/company_login.jsp</result>
+		</action>
+	</package>
+	
 
-   
+
 </struts>

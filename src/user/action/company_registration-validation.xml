@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+<validators>
+
+	<field name="company.company_name">
+		<field-validator type="requiredstring">
+			<message>公司名称为空</message>
+		</field-validator>
+		<field-validator type="stringlength">
+			<param name="minLength">3</param>
+			<message>公司名称至少三个字符，您现在有${company.company_name.length()}</message>
+		</field-validator>
+		
+	</field>
+
+		<field name="company.username">
+		<field-validator type="requiredstring">
+			<message>公司法人为空</message>
+		</field-validator>
+		<field-validator type="stringlength">
+			<param name="minLength">3</param>
+			<message>法人名称至少三个字符，您现在有${company.username.length()}</message>
+		</field-validator>
+	</field>
+
+	<field name="company.password">
+		<field-validator type="stringlength" short-circuit="true">
+			<param name="minLength">3</param>
+			<message>至少3个字符，现在有${company.password.length()}</message>
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">company.password.equals(repass)</param>
+			<message>两次输入密码不一致</message>
+		</field-validator>
+	</field>
+
+	<field name="company.email">
+		<field-validator type="email">
+			<message>邮箱格式错误</message>
+		</field-validator>
+	</field>
+</validators>

@@ -11,7 +11,7 @@ package obj.domain;
 
 public class company {
 	
-	private long id;
+	private int id;
 	private String company_name;
 	private String username; // 法人代表，也可以是用户名
 	private String password;
@@ -19,10 +19,10 @@ public class company {
 	private String location;
 	private String phone;
 	private String email;
-	public long getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getCompany_name() {

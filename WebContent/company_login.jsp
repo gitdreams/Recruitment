@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Insert title here</title>
+<title>登录页面</title>
 </head>
 <body>
 	<s:include value="./parent/background.jsp"></s:include>
@@ -18,7 +18,7 @@
 <body>
 	<section class="content_box cleafix">
 	<div class="left_area fl">
-		<div class="form_head">密码登录</div>
+		<div class="form_head">企业登录</div>
 		<div>
 			<s:form class="active">
 				<div>

@@ -3,15 +3,9 @@
     "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
     "http://struts.apache.org/dtds/struts-2.5.dtd">
 <struts>
-<package name="exception" extends="struts-default">
-  <global-results>
-    <result name="sql_ex">/exception.jsp</result>
-  </global-results>
-  <global-exception-mappings>
-     <exception-mapping exception="java.sql.SQLException" result="sql_ex"/>
-  </global-exception-mappings>  
 
-   </package>
+
+<include file="user/action/user.xml"></include>
    
 <!-- 
 <include file="action/usersinfo.xml"></include>
