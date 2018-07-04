@@ -2,6 +2,7 @@ package user.action;
 
 import org.apache.catalina.startup.UserConfig;
 
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 import dao.db.Cont;
@@ -25,10 +26,16 @@ public class login extends ActionSupport {
 		this.password = password;
 	}
 	
+	public void addSession(String role){
+		ActionContext session = ActionContext.getContext();
+		session.getSession().put("username", this.email_name);
+		session.getSession().put("role", role);		
+	}
+	
 	public String user_login() {
 		String message = "input";
 		
-		String sql = "select * from users where (username=? or email=?) and password=? values(?,?,?)";
+		String sql = "select * from users where (username=? or email=?) and password=?";
 		String[] args = {
 				this.email_name,
 				this.email_name,
@@ -36,9 +43,15 @@ public class login extends ActionSupport {
 		};
 		Cont search = new UsersCont();
 		Object obj = search.getOne(sql, args);
+//		System.out.println(obj);
 		if(obj!=null) {
 			// 将用户名，角色，加入session
+			this.addSession("user");
 			message = "success";
+//			System.out.println(message);
+		}
+		else {
+			addActionMessage("用户名或密码错误");
 		}
 		return message;
 		
@@ -47,7 +60,7 @@ public class login extends ActionSupport {
 	public String company_login() {
 		String message = "input";
 		
-		String sql = "select * from company where (username=? or email=?) and password=? values(?,?,?)";
+		String sql = "select * from company where (username=? or email=?) and password=?";
 		String[] args = {
 				this.email_name,
 				this.email_name,
@@ -57,7 +70,11 @@ public class login extends ActionSupport {
 		Object obj = search.getOne(sql, args);
 		if(obj!=null) {
 			// 将用户名,加入session
+			this.addSession("company");
 			message = "success";
+		}
+		else {
+			addActionMessage("用户名或密码错误");
 		}
 		return message;
 	}

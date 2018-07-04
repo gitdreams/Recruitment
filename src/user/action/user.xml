@@ -19,6 +19,18 @@
 		</action>
 	</package>
 	
-
+	<package name="login" extends="struts-default">
+		<action name="user_login" class="user.action.login" method="user_login">
+			<result name="input">/user_login.jsp</result>
+			<result name="success">/user_login_after.jsp</result>
+		</action>
+		<action name="company_login" class="user.action.login" method="company_login">
+			<result name="input">/company_login.jsp</result>
+			<result name="success">/company_login_after.jsp</result>
+		</action>
+		<action name="test" class="user.action.test">
+			<result name="success">/company_login.jsp</result>
+		</action>
+	</package>
 
 </struts>
