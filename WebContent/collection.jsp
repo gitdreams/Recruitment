@@ -9,7 +9,7 @@
 <title>收藏页面</title>
 </head>
 <body>
-<s:include value="./parent/pre_login.jsp"></s:include>
-
+<s:include value="./parent/user.jsp"></s:include>
+收藏夹
 </body>
 </html>

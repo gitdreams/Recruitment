@@ -9,7 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<s:include value="./parent/pre_login.jsp"></s:include>
-
+<s:include value="./parent/user.jsp"></s:include>
+消息列表
 </body>
 </html>

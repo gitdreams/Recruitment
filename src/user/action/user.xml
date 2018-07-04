@@ -30,5 +30,12 @@
 		</action>
 
 	</package>
+	
+	<package name="user_logout" extends="struts-default">
+		<action name="logout" class="user.action.logout">
+			<result name="input">./index.jsp</result>
+			<result name="success">./index.jsp</result>
+		</action>
+	</package>
 
 </struts>
