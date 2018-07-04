@@ -12,8 +12,7 @@
 <link rel="stylesheet" type="text/css"
 	href="//www.lgstatic.com/www/static/pkg/widgets_1a33497.css" />
 <link rel="stylesheet" type="text/css"
-
-
+	href="//www.lgstatic.com/www/static/pkg/index/page/index/main.html_aio_2_7ace53f.css" />
 
 
 </head>

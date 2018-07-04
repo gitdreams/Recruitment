@@ -9,6 +9,6 @@
 </head>
 <body>
 
-
+<s:include value="./parent/pre_login.jsp"></s:include>
 </body>
 </html>
