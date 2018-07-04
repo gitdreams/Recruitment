@@ -18,9 +18,10 @@ public class CompanyCont implements Cont{
 		ResultSet rs;
 		Dao dao = new DaoImpl();
 		rs = dao.Search(sql, str);
-		company company = new company();
+		company company = null;
 		try {
 			while(rs.next()) {
+				company = new company();
 				company.setId(rs.getInt("ID"));
 				company.setCompany_name(rs.getString("company_name"));
 				company.setUsername(rs.getString("username"));

@@ -9,6 +9,17 @@
 </head>
 <body>
 
+<s:if test="#session.role=='company'">
+<s:include value="./parent/company.jsp"></s:include>
+</s:if>
+<s:elseif test="#session.role='user'">
+<s:include value="./parent/user.jsp"></s:include>
+</s:elseif>
+<s:else>
 <s:include value="./parent/pre_login.jsp"></s:include>
+</s:else>
+
+<s:debug></s:debug>
+
 </body>
 </html>

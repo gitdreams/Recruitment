@@ -20,7 +20,7 @@
 			<message>公司法人为空</message>
 		</field-validator>
 		<field-validator type="stringlength">
-			<param name="minLength">3</param>
+			<param name="minLength">1</param>
 			<message>法人名称至少三个字符，您现在有${company.username.length()}</message>
 		</field-validator>
 	</field>

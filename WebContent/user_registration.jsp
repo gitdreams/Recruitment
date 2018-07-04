@@ -49,7 +49,7 @@
 	<div class="divider fl"></div>
 	<div class="right_area fl">
 		<h5>已有账号</h5>
-		<a href="login.jsp" class="register_now">立即登录</a>
+		<a href="user_login.jsp" class="register_now">立即登录</a>
 	</div>
 	</section>
 
