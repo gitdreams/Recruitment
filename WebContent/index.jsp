@@ -5,12 +5,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>首页</title>
+<title>Insert title here</title>
 </head>
 <body>
 <s:include value="./parent/pre_login.jsp"></s:include>
-<s:action name="test" executeResult="true"></s:action>
-
 
 </body>
 </html>

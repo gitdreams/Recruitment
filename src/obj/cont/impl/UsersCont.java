@@ -19,10 +19,9 @@ public class UsersCont implements Cont{
 		ResultSet rs;
 		Dao dao = new DaoImpl();
 		rs = dao.Search(sql, str);
-		user user = null;
+		user user = new user();
 		try {
 			while(rs.next()) {
-				user = new user();
 				user.setId(rs.getInt("id"));
 				user.setUsername(rs.getString("username"));
 				user.setPassword(rs.getString("password"));
