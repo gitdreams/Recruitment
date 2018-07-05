@@ -13,14 +13,14 @@ package obj.domain;
 
 public class work {
 	
-	private int id;
+	private int id; // 自动
 	private String work;
 	private String location;
 	private int low; // 待遇
 	private int high; // 待遇
 	private String profile;
 	private String jobtime;
-	private int effective;
+	private int effective;   // 有效日期
 	private String company;
 	private String experience; // 工作经验
 	private String type; //职位类别，该工作是属于哪个类别工作，下拉框选择

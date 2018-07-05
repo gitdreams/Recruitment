@@ -7,6 +7,8 @@
 
 <include file="user/action/user.xml"></include>
    
+<include file="company/action/company.xml"></include>
+
 <!-- 
 <include file="action/usersinfo.xml"></include>
 
