@@ -59,3 +59,15 @@ layui.use(['form', 'layedit', 'laydate'], function(){
   
   
 });
+
+
+layui.use(['carousel', 'form'], function(){
+	  var carousel = layui.carousel
+	  ,form = layui.form;
+	  
+	  //常规轮播
+	  carousel.render({
+	    elem: '#test1'
+	    ,arrow: 'always'
+	  });
+});

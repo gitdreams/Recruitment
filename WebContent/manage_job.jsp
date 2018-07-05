@@ -6,9 +6,29 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>职位管理</title>
+
+<!-- layui -->
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="	./layui/css/layui.css" type="text/css"
+	media="all" />
+<script src="./layui/layui.js" charset="utf-8"></script>
+
 </head>
 <body>
 <s:include value="./parent/company.jsp"></s:include>
 企业对自己职位管理
+<div class="layui-col-md12">
+      <div class="layui-card">
+        <div class="layui-card-header">
+        	企业对自己的职位的管理，头可以有职位名称，时间
+        	可以有一个表格（姓名，应聘职位，电话，）
+        </div>
+        <div class="layui-card-body">
+          		企业职位内容
+        </div>
+      </div>
+    </div>
+
 </body>
 </html>

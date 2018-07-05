@@ -10,6 +10,7 @@
 </head>
 <body>
 <s:include value="./parent/user.jsp"></s:include>
-收藏夹
+收藏夹 查 收藏表 就知道该user收藏了那些的职位
+<s:include value="./parent/list_job.jsp"></s:include>
 </body>
 </html>

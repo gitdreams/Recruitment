@@ -8,6 +8,7 @@
 <title>撰写简历</title>
 
 
+<!-- layui -->
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1">
 <link rel="stylesheet" href="	./layui/css/layui.css" type="text/css"
@@ -22,52 +23,43 @@
 
 
 	<form class="layui-form" action="">
-		<div class="layui-form-item">
-			<label class="layui-form-label">职位</label>
-			<div class="layui-input-block">
-				<input type="text" name="title" required lay-verify="required"
-					placeholder="请输入职位名称" autocomplete="off" class="layui-input">
-			</div>
-		</div>
-
-
-		<div class="layui-form-item">
-			<label class="layui-form-label">职位类别**********待修改</label>
-			<div class="layui-input-block">
-				<!-- 
-				<select name="city" lay-verify="required">
-					<option value=""></option>
-					<option value="0">北京</option>
-					<option value="1">上海</option>
-					<option value="2">广州</option>
-					<option value="3">深圳</option>
-					<option value="4">杭州</option>
-				</select>
-			-->
-			</div>
-		</div>
-
-		<div class="layui-form-item">
-			<label class="layui-form-label">地点</label>
-			<div class="layui-input-block">
-				<select name="city" lay-verify="required">
-					<option value=""></option>
-					<option value="0">北京</option>
-					<option value="1">上海</option>
-					<option value="2">广州</option>
-					<option value="3">深圳</option>
-					<option value="4">杭州</option>
-				</select>
-			</div>
-		</div>
-		<div class="layui-form-item">
-			<label class="layui-form-label">工作经验</label>
-			<div class="layui-input-block">
-				<input type="text" name="title" required lay-verify="required"
-					placeholder="请输入该职位所需工作经验（例：经验不限，一年以上）" autocomplete="off"
+		<div class="layui-inline">
+			<label class="layui-form-label">姓名</label>
+			<div class="layui-input-inline">
+				<input type="text" name="number" autocomplete="off"
 					class="layui-input">
 			</div>
 		</div>
+		<div class="layui-inline">
+			<label class="layui-form-label">电话</label>
+			<div class="layui-input-inline">
+				<input type="text" name="number" autocomplete="off"
+					class="layui-input">
+			</div>
+		</div>
+	<div class="layui-inline">
+			<label class="layui-form-label">专业学校</label>
+			<div class="layui-input-inline">
+				<input type="text" name="number" autocomplete="off"
+					class="layui-input">
+			</div>
+		</div>
+		
+    <div class="layui-inline">
+      <label class="layui-form-label">邮箱</label>
+      <div class="layui-input-inline">
+        <input type="text" name="email" lay-verify="email" autocomplete="off" class="layui-input">
+      </div>
+    </div>
+<br>
+    <div class="layui-form-item">
+    <label class="layui-form-label">单选框</label>
+    <div class="layui-input-block">
+      <input type="radio" name="sex" value="男" title="男" checked="">
+      <input type="radio" name="sex" value="女" title="女">
+
+    </div>
+  </div>
 		<div class="layui-form-item">
 			<div class="layui-inline">
 				<label class="layui-form-label">薪资</label>
@@ -82,10 +74,52 @@
 				</div>
 			</div>
 		</div>
-		<div class="layui-inline">
-			<label class="layui-form-label">到期日期</label>
+		<div class="layui-form-item">
+			<label class="layui-form-label">期望职位**********待修改</label>
 			<div class="layui-input-block">
-				<input type="text" name="date" id="date" class="layui-input" placeholder="yyyy-MM-dd"/>
+				<!-- 
+				<select name="city" lay-verify="required">
+					<option value=""></option>
+					<option value="0">北京</option>
+					<option value="1">上海</option>
+					<option value="2">广州</option>
+					<option value="3">深圳</option>
+					<option value="4">杭州</option>
+				</select>
+			-->
+			</div>
+		</div>
+<div class="layui-form-item">
+			<label class="layui-form-label">工作类型</label>
+			<div class="layui-input-block">
+				<select name="city" lay-verify="required">
+					<option value=""></option>
+					<option value="0">实习生</option>
+					<option value="1">全职</option>
+					<option value="2">暑假工</option>
+
+				</select>
+			</div>
+		</div>
+		<div class="layui-form-item">
+			<label class="layui-form-label">工作地点</label>
+			<div class="layui-input-block">
+				<select name="city" lay-verify="required">
+					<option value=""></option>
+					<option value="0">北京</option>
+					<option value="1">上海</option>
+					<option value="2">广州</option>
+					<option value="3">深圳</option>
+					<option value="4">杭州</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="layui-inline">
+			<label class="layui-form-label">到职日期</label>
+			<div class="layui-input-block">
+				<input type="text" name="date" id="date" class="layui-input"
+					placeholder="yyyy-MM-dd" />
 			</div>
 		</div>
 		<br> <br>

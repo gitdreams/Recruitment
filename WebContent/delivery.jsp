@@ -10,6 +10,6 @@
 </head>
 <body>
 <s:include value="./parent/user.jsp"></s:include>
-投递箱
+投递箱：简历，公司，消息列表，查message表就好
 </body>
 </html>

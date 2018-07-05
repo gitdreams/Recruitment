@@ -6,9 +6,24 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>浏览简历</title>
+
+
 </head>
 <body>
 <s:include value="./parent/company.jsp"></s:include>
 企业浏览简历
+
+<div class="layui-col-md12">
+      <div class="layui-card">
+        <div class="layui-card-header">
+        	标题可以是一个超链接连接到简历的详细信息简历一
+        	可以有一个表格（姓名，应聘职位，电话，）
+        </div>
+        <div class="layui-card-body">
+          		简历内容
+        </div>
+      </div>
+    </div>
+    
 </body>
 </html>

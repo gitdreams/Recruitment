@@ -57,7 +57,7 @@
 
 			</div>
 			<ul class="lg_tnav_wrap">
-				<li><a href="./index.jsp" class="current">首页</a></li>
+				<li><a href="./index.jsp">首页</a></li>
 				<li><a href="./post_job.jsp">发布职位</a></li>
 				<li><a rel="nofollow" href="./look_bio.jsp" target="_blank">浏览简历</a></li>
 				<li><a rel="nofollow" href="./manage_job.jsp">职位管理</a></li>
