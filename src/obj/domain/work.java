@@ -20,7 +20,7 @@ public class work {
 	private int high; // 待遇
 	private String profile;
 	private String jobtime;
-	private int effective;   // 有效日期
+	//private int effective;   // 有效日期
 	private String company;
 	private String experience; // 工作经验
 	private String type; //职位类别，该工作是属于哪个类别工作，下拉框选择
@@ -89,11 +89,11 @@ public class work {
 	public void setJobtime(String jobtime) {
 		this.jobtime = jobtime;
 	}
-	public int getEffective() {
-		return effective;
-	}
-	public void setEffective(int effective) {
-		this.effective = effective;
-	}
+//	public int getEffective() {
+//		return effective;
+//	}
+//	public void setEffective(int effective) {
+//		this.effective = effective;
+//	}
 		
 }

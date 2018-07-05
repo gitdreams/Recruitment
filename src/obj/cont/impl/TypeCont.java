@@ -39,6 +39,26 @@ public class TypeCont implements Cont{
 		return cate;
 	}
 
+	public List<category> getFirstType() {
+		// TODO Auto-generated method stub
+		ResultSet rs;
+		String sql="select distinct first from category";
+		Dao dao = new DaoImpl();
+		rs = dao.Search(sql, null);
+		List<category> cate = new ArrayList<category>();
+		try {
+			while(rs.next()) {
+				category category = new category();
+				category.setFirst(rs.getString("first"));
+//				category.setSecond(rs.getString("second"));
+				cate.add(category);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return cate;
+	}
+	
 	@Override
 	public int update(String sql, String[] str) {
 		// TODO Auto-generated method stub

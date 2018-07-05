@@ -9,22 +9,40 @@ import obj.cont.impl.TypeCont;
 import obj.domain.category;
 
 
-public class JobType extends ActionSupport {
+public class JobType extends ActionSupport{
 	
-	private List<category> typelist;
+//	定义下拉框的集合，并给出get set方法
+	private List<category> firstlist;
+	private List<category> secondlist;
 
 	
-	public void setTypelist(List<category> typelist) {
-		this.typelist = typelist;
+	public List<category> getFirstlist() {
+		return firstlist;
 	}
 
 
-	public List<category> getTypelist() {
-		
+	public void setFirstlist(List<category> firstlist) {
+		this.firstlist = firstlist;
+	}
+
+
+	public List<category> getSecondlist() {
+		return secondlist;
+	}
+
+
+	public void setSecondlist(List<category> secondlist) {
+		this.secondlist = secondlist;
+	}
+
+	
+	public String searchCategory() {
 		Cont search = new TypeCont();
-		List<category> list = search.getAllDB();
-		return list;
+		this.secondlist = search.getAllDB();
+		TypeCont type = new TypeCont();
+		this.firstlist = type.getFirstType();
+//		System.out.println(this.typelist.get(0).getSecond());
+		return "success";
 	}
-	
 
 }

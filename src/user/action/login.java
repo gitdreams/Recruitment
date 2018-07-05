@@ -7,6 +7,7 @@ import com.opensymphony.xwork2.ActionSupport;
 
 import dao.db.Cont;
 import obj.cont.impl.UsersCont;
+import obj.domain.company;
 import obj.cont.impl.CompanyCont;
 
 public class login extends ActionSupport {
@@ -25,10 +26,11 @@ public class login extends ActionSupport {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public void addSession(String role){
+	public void addSession(String role, String company){
 		ActionContext session = ActionContext.getContext();
 		session.getSession().put("username", this.email_name);
 		session.getSession().put("role", role);		
+		session.getSession().put("company", company);
 	}
 	public String user_login() {
 		String message = "input";
@@ -43,7 +45,7 @@ public class login extends ActionSupport {
 		Object obj = search.getOne(sql, args);
 		if(obj!=null) {
 			// 将用户名，角色，加入session
-			this.addSession("user");
+			this.addSession("user","");
 			message = "success";
 //			System.out.println(message);
 		}
@@ -67,7 +69,9 @@ public class login extends ActionSupport {
 		Object obj = search.getOne(sql, args);
 		if(obj!=null) {
 			// 将用户名,加入session
-			this.addSession("company");
+			company company = (company)obj;
+			String companyName = company.getCompany_name();
+			this.addSession("company",companyName);
 			message = "success";
 		}
 		else {
