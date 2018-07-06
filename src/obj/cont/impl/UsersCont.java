@@ -29,6 +29,7 @@ public class UsersCont implements Cont{
 				user.setEmail(rs.getString("email"));
 				user.setPhone(rs.getString("phone"));
 				user.setProfile(rs.getString("profile"));
+				user.setSex(rs.getString("sex"));
 			}
 		} catch(SQLException e) {
 			e.printStackTrace();
@@ -53,6 +54,7 @@ public class UsersCont implements Cont{
 				user.setEmail(rs.getString("email"));
 				user.setPhone(rs.getString("phone"));
 				user.setProfile(rs.getString("profile"));
+				user.setSex(rs.getString("sex"));
 				users.add(user);
 			}
 		} catch (SQLException e) {

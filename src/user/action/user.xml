@@ -43,6 +43,10 @@
 			<result name="input">./edit_bio.jsp</result>
 			<result name="success">./index.jsp</result>
 		</action>
+		<action name="EditProfile" class="user.action.EditProfile">
+			<result name="input">./edit_profile.jsp</result>
+			<result name="success">./index.jsp</result>
+		</action>
 	</package>
 
 </struts>

@@ -19,26 +19,26 @@
 <s:include value="./parent/user.jsp"></s:include>
 完善个人信息
 
-<form class="layui-form" action="">
+<form class="layui-form" action="EditProfile">
 		<div class="layui-inline">
 			<label class="layui-form-label">姓名</label>
 			<div class="layui-input-inline">
 			
 				<input 
 				type="text" 
-				name="number" 
+				name="user.username" 
 				autocomplete="off"
 				class="layui-input"
 				readonly="true"
 				value="${sessionScope.userobj.username }">
 			</div>
-
+		</div>
     <div class="layui-inline">
       <label class="layui-form-label">邮箱</label>
       <div class="layui-input-inline">
         <input 
         type="text" 
-        name="email" 
+        name="user.email" 
         lay-verify="email" 
         autocomplete="off" 
         class="layui-input"
@@ -48,27 +48,34 @@
       </div>
     </div>
 
-		</div>
 		<div class="layui-inline">
 			<label class="layui-form-label">电话</label>
 			<div class="layui-input-inline">
-				<input type="text" name="number" autocomplete="off"
+				<input type="text" name="user.phone" autocomplete="off"
 					class="layui-input">
 			</div>
 		</div>
     <div class="layui-form-item">
     <label class="layui-form-label">单选框</label>
     <div class="layui-input-block">
-      <input type="radio" name="sex" value="男" title="男" checked="">
-      <input type="radio" name="sex" value="女" title="女">
+    <s:if test="#session.userobj.sex=='男'.toString()">
+      <input type="radio" name="user.sex" value="男" title="男" checked="checked"/>
+      <input type="radio" name="user.sex" value="女" title="女" >    
+    </s:if>
+    <s:else>
+      <input type="radio" name="user.sex" value="男" title="男">
+      <input type="radio" name="user.sex" value="女" title="女" checked="checked">    
+    </s:else>
 
     </div>
- 
-		<br> <br>
+ </div>
+
 		<div class="layui-form-item layui-form-text">
 			<label class="layui-form-label">个人简介</label>
 			<div class="layui-input-block">
-				<textarea name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>
+				<textarea name="user.profile" placeholder="请输入内容" class="layui-textarea">
+				<s:property value="#session.userobj.profile"/>
+				</textarea>
 			</div>
 		</div>
 		<div class="layui-form-item">
