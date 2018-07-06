@@ -30,11 +30,11 @@
 					placeholder="请输入职位名称" autocomplete="off" class="layui-input">
 			</div>
 		</div>
-		
+
 		<div class="layui-form-item">
-		<label class="layui-form-label">职位类型</label>
-		<div class="layui-input-block">
-		<!-- 
+			<label class="layui-form-label">职位类型</label>
+			<div class="layui-input-block">
+				<!-- 
 			<select name="modules1" lay-verify="required" lay-search="" id="firstselect">
 				<option value=""></option>
 				<s:iterator value="firstlist" var="list1">
@@ -44,17 +44,35 @@
 				</s:iterator>
 			</select>
 			-->
-
+				<!-- 
 			<select name="work.type" lay-verify="required" lay-search="">
 				<option value=""></option>
 				<s:iterator value="secondlist" var="list">
-					<option value="second">
+					<option value="#list.second">
 						<s:property value="#list.second"/>
 					</option>
 				</s:iterator>
 			</select>
-		</div>
-
+			-->
+			<s:form name="JobType" action="getJobType" method="post">
+                <s:doubleselect 
+                	formName="JobType" 
+                    name="firstname"
+                    headerValue="" headerKey="0"
+                    list="firstlist" listKey="first" listValue="first"
+                    doubleName="secondname" doubleList="maplist.get(top.second)"
+                    doubleListKey="second" doubleListValue="ssecond"/>
+            </s:form>
+            <!-- 
+				<s:select
+				lay-verify="required" lay-search="" 
+				list="secondlist" 
+				name="work.type" 
+				listKey="second"
+				listValue="second" 
+				headerKey="0" headerValue="" />
+			</div>
+-->
 			<!-- 
 								<option value="">请选择工作类型111</option>
 				<s:iterator value="typelist" var="list">
@@ -64,7 +82,7 @@
 				</s:iterator>
 			-->
 		</div>
-
+<br>
 		<div class="layui-form-item">
 			<label class="layui-form-label">地点</label>
 			<div class="layui-input-block">
@@ -81,9 +99,9 @@
 		<div class="layui-form-item">
 			<label class="layui-form-label">工作经验</label>
 			<div class="layui-input-block">
-				<input type="text" name="work.experience" required lay-verify="required"
-					placeholder="请输入该职位所需工作经验（例：经验不限，一年以上）" autocomplete="off"
-					class="layui-input">
+				<input type="text" name="work.experience" required
+					lay-verify="required" placeholder="请输入该职位所需工作经验（例：经验不限，一年以上）"
+					autocomplete="off" class="layui-input">
 			</div>
 		</div>
 		<div class="layui-form-item">
@@ -111,7 +129,8 @@
 		<div class="layui-form-item layui-form-text">
 			<label class="layui-form-label">职位简介</label>
 			<div class="layui-input-block">
-				<textarea name="work.profile" placeholder="请输入内容" class="layui-textarea"></textarea>
+				<textarea name="work.profile" placeholder="请输入内容"
+					class="layui-textarea"></textarea>
 			</div>
 		</div>
 		<div class="layui-form-item">

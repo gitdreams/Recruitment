@@ -42,7 +42,7 @@ public class AddJob extends ActionSupport {
 		Cont add = new AddWorkCont();
 		int status = add.update(sql, args);
 		if(status>0) {
-			System.out.println(args);
+			System.out.println(this.work.getType());
 			message = "success";
 		}
 		return message;

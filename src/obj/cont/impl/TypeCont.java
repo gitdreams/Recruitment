@@ -31,6 +31,7 @@ public class TypeCont implements Cont{
 				category category = new category();
 				category.setFirst(rs.getString("first"));
 				category.setSecond(rs.getString("second"));
+//				category.setId(rs.getInt("id"));
 				cate.add(category);
 			}
 		} catch (SQLException e) {
@@ -50,6 +51,7 @@ public class TypeCont implements Cont{
 			while(rs.next()) {
 				category category = new category();
 				category.setFirst(rs.getString("first"));
+//				category.setId(rs.getInt("id"));
 //				category.setSecond(rs.getString("second"));
 				cate.add(category);
 			}

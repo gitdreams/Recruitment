@@ -18,6 +18,57 @@ public class bio {
 	private int low; //薪资最低和最高
 	private int high;
 	private String profile;
+	
+	private String name;
+	private String phone;
+	private String school;
+	private String email;
+	private String sex;
+	private String type;
+	private String workTime;
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	public String getSchool() {
+		return school;
+	}
+	public void setSchool(String school) {
+		this.school = school;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getSex() {
+		return sex;
+	}
+	public void setSex(String sex) {
+		this.sex = sex;
+	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
+	public String getWorkTime() {
+		return workTime;
+	}
+	public void setWorkTime(String workTime) {
+		this.workTime = workTime;
+	}
 	public int getId() {
 		return id;
 	}
