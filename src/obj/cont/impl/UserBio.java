@@ -3,6 +3,8 @@ package obj.cont.impl;
 import java.util.List;
 
 import dao.db.Cont;
+import dao.db.Dao;
+import dao.impl.db.DaoImpl;
 
 public class UserBio implements Cont{
 
@@ -21,7 +23,9 @@ public class UserBio implements Cont{
 	@Override
 	public int update(String sql, String[] str) {
 		// TODO Auto-generated method stub
-		return 0;
+		Dao dao = new DaoImpl();
+		int status = dao.update(sql, str);
+		return status;
 	}
 
 }

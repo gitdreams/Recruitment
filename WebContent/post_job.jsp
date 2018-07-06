@@ -60,8 +60,8 @@
                     name="firstname"
                     headerValue="" headerKey="0"
                     list="firstlist" listKey="first" listValue="first"
-                    doubleName="secondname" doubleList="maplist.get(top.second)"
-                    doubleListKey="second" doubleListValue="ssecond"/>
+                    doubleName="secondname" doubleList="maplist.get(top.first)"
+                    doubleListKey="first" doubleListValue="second"/>
             </s:form>
             <!-- 
 				<s:select

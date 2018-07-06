@@ -7,7 +7,7 @@ import com.opensymphony.xwork2.ActionSupport;
 
 import dao.db.Cont;
 import obj.cont.impl.UsersCont;
-import obj.domain.company;
+import obj.domain.*;
 import obj.cont.impl.CompanyCont;
 
 public class login extends ActionSupport {
@@ -26,10 +26,17 @@ public class login extends ActionSupport {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public void addSession(String role, String company){
+	public void addSession(String role, String company, Object obj){
 		ActionContext session = ActionContext.getContext();
 		session.getSession().put("username", this.email_name);
-		session.getSession().put("role", role);		
+		session.getSession().put("role", role);	
+		if(role=="user") {
+			session.getSession().put("userobj", (user)obj);
+		}else if(role=="company") {
+			session.getSession().put("companyobj", (company)obj);
+		}else {
+			
+		}
 		session.getSession().put("company", company);
 	}
 	public String user_login() {
@@ -45,7 +52,7 @@ public class login extends ActionSupport {
 		Object obj = search.getOne(sql, args);
 		if(obj!=null) {
 			// 将用户名，角色，加入session
-			this.addSession("user","");
+			this.addSession("user","", obj);
 			message = "success";
 //			System.out.println(message);
 		}
@@ -71,7 +78,7 @@ public class login extends ActionSupport {
 			// 将用户名,加入session
 			company company = (company)obj;
 			String companyName = company.getCompany_name();
-			this.addSession("company",companyName);
+			this.addSession("company",companyName, obj);
 			message = "success";
 		}
 		else {

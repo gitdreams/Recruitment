@@ -37,5 +37,12 @@
 			<result name="success">./index.jsp</result>
 		</action>
 	</package>
+	
+	<package name="userbio" extends="struts-default">
+		<action name="AddBio" class="user.action.EditBio">
+			<result name="input">./edit_bio.jsp</result>
+			<result name="success">./index.jsp</result>
+		</action>
+	</package>
 
 </struts>
