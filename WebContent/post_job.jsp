@@ -9,10 +9,7 @@
 <title>发布职位</title>
 
 <!-- layui -->
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, maximum-scale=1">
-<link rel="stylesheet" href="	./layui/css/layui.css" type="text/css"
-	media="all" />
+<link rel="stylesheet" href="	./layui/css/layui.css" type="text/css"/>
 <script src="./layui/layui.js" charset="utf-8"></script>
 <script type="text/javascript" src="./layui/selflayui.js"></script>
 <script type="text/javascript" src="../static/js/jquery-1.3.2.min.js"></script>
@@ -20,7 +17,6 @@
 <body>
 	<s:include value="./parent/company.jsp"></s:include>
 	企业发布职位
-
 
 	<form class="layui-form" action="addJob">
 		<div class="layui-form-item">
@@ -54,6 +50,7 @@
 				</s:iterator>
 			</select>
 			-->
+			<!-- 
 			<s:form name="JobType" action="getJobType" method="post">
                 <s:doubleselect 
                 	formName="JobType" 
@@ -63,7 +60,8 @@
                     doubleName="secondname" doubleList="maplist.get(top.first)"
                     doubleListKey="first" doubleListValue="second"/>
             </s:form>
-            <!-- 
+            -->
+
 				<s:select
 				lay-verify="required" lay-search="" 
 				list="secondlist" 
@@ -72,7 +70,7 @@
 				listValue="second" 
 				headerKey="0" headerValue="" />
 			</div>
--->
+
 			<!-- 
 								<option value="">请选择工作类型111</option>
 				<s:iterator value="typelist" var="list">
@@ -82,7 +80,6 @@
 				</s:iterator>
 			-->
 		</div>
-<br>
 		<div class="layui-form-item">
 			<label class="layui-form-label">地点</label>
 			<div class="layui-input-block">
@@ -96,6 +93,7 @@
 				</select>
 			</div>
 		</div>
+		
 		<div class="layui-form-item">
 			<label class="layui-form-label">工作经验</label>
 			<div class="layui-input-block">

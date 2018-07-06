@@ -20,7 +20,7 @@ public class user {
 	private String password;
 	private String email;
 	private String phone;
-	private boolean sex;
+	private String sex;
 	private String profile;
 	
 	public int getId() {
@@ -47,10 +47,10 @@ public class user {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public boolean isSex() {
+	public String getSex() {
 		return sex;
 	}
-	public void setSex(boolean sex) {
+	public void setSex(String sex) {
 		this.sex = sex;
 	}
 	public String getProfile() {

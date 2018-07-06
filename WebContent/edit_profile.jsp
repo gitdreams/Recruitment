@@ -8,9 +8,8 @@
 <title>完善个人信息</title>
 
 <!-- layui -->
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, maximum-scale=1">
-<link rel="stylesheet" href="	./layui/css/layui.css" type="text/css"
+
+<link rel="stylesheet" href="./layui/css/layui.css" type="text/css"
 	media="all" />
 <script src="./layui/layui.js" charset="utf-8"></script>
 <script type="text/javascript" src="./layui/selflayui.js"></script>
@@ -24,15 +23,28 @@
 		<div class="layui-inline">
 			<label class="layui-form-label">姓名</label>
 			<div class="layui-input-inline">
-				<input type="text" name="number" autocomplete="off"
-					class="layui-input">
+			
+				<input 
+				type="text" 
+				name="number" 
+				autocomplete="off"
+				class="layui-input"
+				readonly="true"
+				value="${sessionScope.userobj.username }">
 			</div>
-
 
     <div class="layui-inline">
       <label class="layui-form-label">邮箱</label>
       <div class="layui-input-inline">
-        <input type="text" name="email" lay-verify="email" autocomplete="off" class="layui-input">
+        <input 
+        type="text" 
+        name="email" 
+        lay-verify="email" 
+        autocomplete="off" 
+        class="layui-input"
+        readonly="true"
+        value="${sessionScope.userobj.email }"
+        >
       </div>
     </div>
 
