@@ -7,11 +7,11 @@
 <struts>
 
 	<package name="company" extends="struts-default">
-			<action name="getJobType" class="company.action.JobType" method="searchCategory">
+			<action name="getJobType" class="company.action.JobType" method="secondlist">
 				<result name="success">/post_job.jsp</result>
 			</action>
 			<action name="indexJob" class="company.action.JobType" method="searchCategory">
-				<result name="success" type="redirect">/parent/content.jsp</result>
+				<result name="success">/welcome.jsp</result>
 			</action>
 			<action name="addJob" class="company.action.AddJob">
 				<result name="input">/post_job.jsp</result>
@@ -23,4 +23,10 @@
 			</action> 
 	</package>
 
+	<package name="companyJobList" extends="struts-default">
+		<action name="ListJob" class="company.action.ListJob">
+			<result name="input">/index.jsp</result>
+			<result name="success">/look_job.jsp</result>
+		</action>
+	</package>
 </struts>

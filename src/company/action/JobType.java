@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 import dao.db.Cont;
@@ -17,17 +19,18 @@ public class JobType extends ActionSupport{
 //	定义下拉框的集合，并给出get set方法
 	private List<category> firstlist;
 	private List<category> secondlist;
-//	private Map<String, List<category>> maplist;
+	private Map<String, List<String>> maplist;
 	
 	
-//	public Map<String, List<category>> getMaplist() {
-//		return maplist;
-//	}
-//
-//
-//	public void setMaplist(Map<String, List<category>> maplist) {
-//		this.maplist = maplist;
-//	}
+
+	public Map<String, List<String>> getMaplist() {
+		return maplist;
+	}
+
+
+	public void setMaplist(Map<String, List<String>> maplist) {
+		this.maplist = maplist;
+	}
 
 
 	public List<category> getFirstlist() {
@@ -68,6 +71,31 @@ public class JobType extends ActionSupport{
 //			maplist.put(this.firstlist.get(i).getFirst(), doublelist);
 //		}
 //		System.out.println(maplist.get("技术").get(0).getSecond());
+//		ActionContext act = ActionContext.getContext();
+//		act.getSession().put("firstlist", this.firstlist);
+//		act.getSession().put("secondlist", this.secondlist);
+		this.maplist = new HashMap<String, List<String>>();
+		for(int i=0; i<this.secondlist.size(); i++) {
+			List<String> second = new ArrayList<String>();
+			maplist.put(this.secondlist.get(i).getFirst(), second);
+//			System.out.println(this.maplist.get(this.secondlist.get(i).getFirst()));
+		}
+		Set<String> keys = this.maplist.keySet();
+		for(String key: keys) {
+			for(int i = 0; i<this.secondlist.size(); i++) {
+				if(key==this.secondlist.get(i).getFirst()) {
+					this.maplist.get(key).add(this.secondlist.get(i).getSecond());
+				}
+			}
+		}
+		ActionContext act = ActionContext.getContext();
+		act.getSession().put("maplist", this.maplist);
+		act.getSession().put("secondlist", this.secondlist);
+		return "success";
+	}
+	
+	public String secondlist() {
+		
 		return "success";
 	}
 

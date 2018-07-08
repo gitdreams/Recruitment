@@ -5,27 +5,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
 <title>首页</title>
 </head>
 <body>
-
-<s:if test="#session.role=='company'">
-<s:include value="./parent/company.jsp"></s:include>
-</s:if>
-<s:elseif test="#session.role=='user'">
-<s:include value="./parent/user.jsp"></s:include>
-</s:elseif>
-<s:else>
-<s:include value="./parent/pre_login.jsp"></s:include>
-</s:else>
-<!-- 
 <s:action name="indexJob" executeResult="true"></s:action>
--->
-<s:include value="./parent/content.jsp"></s:include>
-职位类表之前应该有分类
-
-<s:include value="./parent/list_job.jsp"></s:include>
-<s:debug></s:debug>
 
 </body>
 </html>

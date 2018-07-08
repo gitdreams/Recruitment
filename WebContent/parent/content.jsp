@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -14,59 +15,51 @@
 </head>
 
 <body>
+
 	<div class="container-body">
 		<div class="clearfix">
 			<div id="sidebar" class="sidebar"
 				data-lg-tj-track-code="index_navigation" data-lg-tj-track-type="1">
 				<div class="mainNavs">
-				<!-- 从这开始 -->
-				
-					<div class="menu_box">
-						<div class="menu_main job_hopping">
-							<div class="category-list">
-								<h2>技术</h2>
-								<a href="">显示第一栏</a> <i class="arrow"></i>
+					<!-- 从这开始 -->
+
+					<s:iterator value="maplist" var="map">
+						<div class="menu_box">
+							<div class="menu_main">
+								<div class="category-list">
+									<h2>
+										<s:property value="key" />
+									</h2>
+									<s:iterator value="value" var="second">
+									<s:action name="ListJob?jobType=#second" var="listjob"></s:action>
+										<a href="${listjob }"> 
+										<s:property value="#second" />
+										</a>
+										<i class="arrow"></i>
+									</s:iterator>
+								</div>
+							</div>
+
+							<div class="menu_sub dn">
+								<dl>
+									<dd>
+									<s:iterator value="value" var="job">
+									<s:action name="ListJob?jobType=#job" var="listjob"></s:action>
+										<a href="${listjob }"> 
+										<s:property value="#job" />
+										</a>
+										<i class="arrow"></i>
+									</s:iterator>
+									</dd>
+
+								</dl>
 							</div>
 						</div>
-						<div class="menu_sub dn">
-							<dl>
-								<dd>
-									<a href="">2</a> <a href="">3</a>
-								</dd>
-							</dl>
-						</div>
-					</div>
-				<!-- 到这结束是一个栏目 -->
-					
-					<div class="menu_box">
-						<div class="menu_main job_hopping">
-							<div class="category-list">
-								<h2>技术</h2>
-								<a href="">显示第一栏</a> <i class="arrow"></i>
-							</div>
-						</div>
-						<div class="menu_sub dn">
-							<dl>
-								<dd>
-									<a href="">2</a> <a href="">3</a>
-								</dd>
-							</dl>
-						</div>
-					</div>
-					
-					
+					</s:iterator>
+
 				</div>
 			</div>
 		</div>
-
-		<!--     <div class="subscribe">
-        <a href="https://www.lagou.com/s/subscribe.html" target="_blank" rel="nofollow" data-lg-tj-id="4g00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">
-            <span>订阅职位</span>
-            <i></i>
-        </a>
-    </div> -->
-		<!-- <div class="suggestCity"><strong>北京站</strong><span id="changeCity_btn">[切换城市]</span></div> -->
-	</div>
 
 
 
@@ -85,15 +78,8 @@
 		window.global = window.global || {};
 		global.userCtx = 'com.lagou.entity.User@7605c3fa';
 		window.global = window.global || {};
-		global.isLogin = true;
-		global.isFirst = false;
-		require([ 'common/widgets/header_c/modules/emailvalid/main' ]);
-		require([ 'common/widgets/passport/passport' ], function() {
-			require([ 'common/widgets/common/msgPopup' ]);
-			// require('notice');
-		});
+
 		require([ 'common/widgets/header_c/layout/main' ]);
-		require([ 'common/widgets/footer_c/layout/main' ]);
 		require([ 'common/widgets/new_login_toolbar/main' ])
 		//业务主模块入口
 		require([ 'index/page/index/main' ]);

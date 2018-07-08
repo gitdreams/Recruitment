@@ -37,29 +37,30 @@
 					class="layui-input">
 			</div>
 		</div>
-	<div class="layui-inline">
+		<div class="layui-inline">
 			<label class="layui-form-label">专业学校</label>
 			<div class="layui-input-inline">
 				<input type="text" name="bio.school" autocomplete="off"
 					class="layui-input">
 			</div>
 		</div>
-		
-    <div class="layui-inline">
-      <label class="layui-form-label">邮箱</label>
-      <div class="layui-input-inline">
-        <input type="text" name="bio.email" lay-verify="email" autocomplete="off" class="layui-input">
-      </div>
-    </div>
-<br>
-    <div class="layui-form-item">
-    <label class="layui-form-label">单选框</label>
-    <div class="layui-input-block">
-      <input type="radio" name="bio.sex" value="男" title="男" checked="">
-      <input type="radio" name="bio.sex" value="女" title="女">
 
-    </div>
-  </div>
+		<div class="layui-inline">
+			<label class="layui-form-label">邮箱</label>
+			<div class="layui-input-inline">
+				<input type="text" name="bio.email" lay-verify="email"
+					autocomplete="off" class="layui-input">
+			</div>
+		</div>
+		<br>
+		<div class="layui-form-item">
+			<label class="layui-form-label">单选框</label>
+			<div class="layui-input-block">
+				<input type="radio" name="bio.sex" value="男" title="男" checked="">
+				<input type="radio" name="bio.sex" value="女" title="女">
+
+			</div>
+		</div>
 		<div class="layui-form-item">
 			<div class="layui-inline">
 				<label class="layui-form-label">薪资</label>
@@ -81,7 +82,7 @@
 					placeholder="请输入职位名称" autocomplete="off" class="layui-input">
 			</div>
 		</div>
-<div class="layui-form-item">
+		<div class="layui-form-item">
 			<label class="layui-form-label">工作类型</label>
 			<div class="layui-input-block">
 				<select name="bio.type" lay-verify="required">
@@ -96,13 +97,41 @@
 		<div class="layui-form-item">
 			<label class="layui-form-label">工作地点</label>
 			<div class="layui-input-block">
-				<select name="bio.location" lay-verify="required">
-					<option value=""></option>
-					<option value="0">北京</option>
-					<option value="1">上海</option>
-					<option value="2">广州</option>
-					<option value="3">深圳</option>
-					<option value="4">杭州</option>
+				<select name="bio.location" lay-verify="required" lay-search="">
+						<option value="">${sessionScope.userobj.location}</option>
+						<option value="北京">北京</option>
+						<option value="上海">上海</option>
+						<option value="天津">天津</option>
+						<option value="重庆">重庆</option>
+						<option value="哈尔滨">哈尔滨</option>
+						<option value="长春">长春</option>
+						<option value="沈阳">沈阳</option>
+						<option value="呼和浩特">呼和浩特</option>
+						<option value="石家庄">石家庄</option>
+						<option value="乌鲁木齐">乌鲁木齐</option>
+						<option value="兰州">兰州</option>
+						<option value="西宁">西宁</option>
+						<option value="西安">西安</option>
+						<option value="银川">银川</option>
+						<option value="郑州">郑州</option>
+						<option value="济南">济南</option>
+						<option value="太原">太原</option>
+						<option value="合肥">合肥</option>
+						<option value="武汉">武汉</option>
+						<option value="南京">南京</option>
+						<option value="成都">成都</option>
+						<option value="贵阳">贵阳</option>
+						<option value="昆明">昆明</option>
+						<option value="南宁">南宁</option>
+						<option value="拉萨">拉萨</option>
+						<option value="杭州">杭州</option>
+						<option value="南昌">南昌</option>
+						<option value="广州">广州</option>
+						<option value="福州">福州</option>
+						<option value="台北">台北</option>
+						<option value="海口">海口</option>
+						<option value="香港">香港</option>
+						<option value="澳门">澳门</option>
 				</select>
 			</div>
 		</div>
@@ -118,7 +147,8 @@
 		<div class="layui-form-item layui-form-text">
 			<label class="layui-form-label">个人简介</label>
 			<div class="layui-input-block">
-				<textarea name="bio.profile" placeholder="请输入内容" class="layui-textarea"></textarea>
+				<textarea name="bio.profile" placeholder="请输入内容"
+					class="layui-textarea"></textarea>
 			</div>
 		</div>
 		<div class="layui-form-item">
