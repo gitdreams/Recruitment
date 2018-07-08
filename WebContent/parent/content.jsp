@@ -20,6 +20,7 @@
 				data-lg-tj-track-code="index_navigation" data-lg-tj-track-type="1">
 				<div class="mainNavs">
 				<!-- 从这开始 -->
+				
 					<div class="menu_box">
 						<div class="menu_main job_hopping">
 							<div class="category-list">
@@ -71,16 +72,7 @@
 
 	<script type="text/javascript"
 		src="//www.lgstatic.com/www/static/pkg/vendor_e3ddeee.js"></script>
-	<script type="text/javascript">
-		/*resourcemap*/
-		require
-				.config({
-					paths : {
-						"common/components/artTemplate/template-helper" : "//www.lgstatic.com/www/static/common/components/artTemplate/template-helper_69eaf51",
-						"common/widgets/common/msgPopup" : "//www.lgstatic.com/www/static/common/widgets/common/msgPopup_ff38f07"
-					}
-				});
-	</script>
+
 	<script type="text/javascript"
 		src="//www.lgstatic.com/www/static/pkg/index/page/index/main.html_aio_b1a1945.js"></script>
 	<script type="text/javascript"
@@ -92,28 +84,17 @@
 	<script type="text/javascript">
 		window.global = window.global || {};
 		global.userCtx = 'com.lagou.entity.User@7605c3fa';
-
 		window.global = window.global || {};
 		global.isLogin = true;
 		global.isFirst = false;
-		global.subSite = '北京';
-		global.subSites = '全国,上海,杭州,广州,深圳,成都,武汉'.split(',');
-
 		require([ 'common/widgets/header_c/modules/emailvalid/main' ]);
-
 		require([ 'common/widgets/passport/passport' ], function() {
-
 			require([ 'common/widgets/common/msgPopup' ]);
 			// require('notice');
-
 		});
-
 		require([ 'common/widgets/header_c/layout/main' ]);
-
 		require([ 'common/widgets/footer_c/layout/main' ]);
-
 		require([ 'common/widgets/new_login_toolbar/main' ])
-
 		//业务主模块入口
 		require([ 'index/page/index/main' ]);
 	</script>

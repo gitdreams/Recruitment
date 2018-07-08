@@ -18,7 +18,9 @@
 <s:else>
 <s:include value="./parent/pre_login.jsp"></s:include>
 </s:else>
-
+<!-- 
+<s:action name="indexJob" executeResult="true"></s:action>
+-->
 <s:include value="./parent/content.jsp"></s:include>
 职位类表之前应该有分类
 

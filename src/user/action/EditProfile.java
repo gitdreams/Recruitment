@@ -36,6 +36,8 @@ public class EditProfile extends ActionSupport{
 		};
 		int status = updateUser.update(sql, args);
 		if(status > 0) {
+			ActionContext act = ActionContext.getContext();
+			act.getSession().put("userobj", user);
 			message="success";
 		}
 		return message;

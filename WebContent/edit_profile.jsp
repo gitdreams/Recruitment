@@ -51,20 +51,24 @@
 		<div class="layui-inline">
 			<label class="layui-form-label">电话</label>
 			<div class="layui-input-inline">
-				<input type="text" name="user.phone" autocomplete="off"
-					class="layui-input">
+				<input 
+				type="text" 
+				value="${sessionScope.userobj.phone }"
+				name="user.phone" 
+				autocomplete="off"
+				class="layui-input">
 			</div>
 		</div>
     <div class="layui-form-item">
     <label class="layui-form-label">单选框</label>
     <div class="layui-input-block">
     <s:if test="#session.userobj.sex=='男'.toString()">
-      <input type="radio" name="user.sex" value="男" title="男" checked="checked"/>
+      <input type="radio" name="user.sex" value="男" title="男" checked=""/>
       <input type="radio" name="user.sex" value="女" title="女" >    
     </s:if>
     <s:else>
       <input type="radio" name="user.sex" value="男" title="男">
-      <input type="radio" name="user.sex" value="女" title="女" checked="checked">    
+      <input type="radio" name="user.sex" value="女" title="女" checked="">    
     </s:else>
 
     </div>
@@ -74,8 +78,7 @@
 			<label class="layui-form-label">个人简介</label>
 			<div class="layui-input-block">
 				<textarea name="user.profile" placeholder="请输入内容" class="layui-textarea">
-				<s:property value="#session.userobj.profile"/>
-				</textarea>
+<s:property value="#session.userobj.profile"/></textarea>
 			</div>
 		</div>
 		<div class="layui-form-item">

@@ -19,7 +19,7 @@
 <body>
 	<s:include value="./parent/company.jsp"></s:include>
 	企业完善自己信息 公司名称，公司法人，简介，地点，电话，邮件
-	<form class="layui-form" action="">
+	<form class="layui-form" action="CompanyInfo">
 		<div class="layui-inline">
 			<label class="layui-form-label">公司名称</label>
 			<div class="layui-input-inline">
@@ -56,7 +56,7 @@
 				class="layui-input">
 			</div>
 		</div>
-
+<!-- 
 		<div class="layui-inline">
 			<label class="layui-form-label">公司地点</label>
 			<div class="layui-input-inline">
@@ -68,6 +68,52 @@
 				class="layui-input">
 			</div>
 		</div>
+-->
+
+
+ <div class="layui-inline">
+      <label class="layui-form-label">公司地点</label>
+      <div class="layui-input-inline">
+        <select name="company.location" lay-verify="required" lay-search="">
+          <option value="">${sessionScope.companyobj.location}</option>
+          <option value="北京">北京</option>
+          <option value="上海">上海</option>
+          <option value="天津">天津</option>
+          <option value="重庆">重庆</option>
+          <option value="哈尔滨">哈尔滨</option>
+          <option value="长春">长春</option>
+          <option value="沈阳">沈阳</option>
+          <option value="呼和浩特">呼和浩特</option>
+          <option value="石家庄">石家庄</option>
+          <option value="乌鲁木齐">乌鲁木齐</option>
+          <option value="兰州">兰州</option>
+          <option value="西宁">西宁</option>
+          <option value="西安">西安</option>
+          <option value="银川">银川</option>
+          <option value="郑州">郑州</option>
+          <option value="济南">济南</option>
+          <option value="太原">太原</option>
+          <option value="合肥">合肥</option>
+          <option value="武汉">武汉</option>
+          <option value="南京">南京</option>
+          <option value="成都">成都</option>
+          <option value="贵阳">贵阳</option>
+          <option value="昆明">昆明</option>
+          <option value="南宁">南宁</option>
+          <option value="拉萨">拉萨</option>
+          <option value="杭州">杭州</option>
+          <option value="南昌">南昌</option>
+          <option value="广州">广州</option>
+          <option value="福州">福州</option>
+          <option value="台北">台北</option>
+          <option value="海口">海口</option>
+          <option value="香港">香港</option>
+          <option value="澳门">澳门</option>
+        </select>
+      </div>
+    </div>
+
+
 <br><br>
 		<div class="layui-inline">
 			<label class="layui-form-label">邮箱</label>
@@ -88,8 +134,7 @@
 			<label class="layui-form-label">公司简介</label>
 			<div class="layui-input-block">
 				<textarea name="company.profile" placeholder="请输入内容" class="layui-textarea">
-				${sessionScope.companyobj.profile }
-				</textarea>
+${sessionScope.companyobj.profile }</textarea>
 			</div>
 		</div>
 		<div class="layui-form-item">
