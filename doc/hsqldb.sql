@@ -4,7 +4,7 @@ username VARCHAR(256),
 password VARCHAR(256),
 email VARCHAR(64),
 phone VARCHAR(64),
-sex BOOLEAN,
+sex VARCHAR(64),
 profile VARCHAR(256)
 );
 
