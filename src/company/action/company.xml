@@ -26,7 +26,7 @@
 	<package name="companyJobList" extends="struts-default">
 		<action name="ListJob" class="company.action.ListJob">
 			<result name="input">/index.jsp</result>
-			<result name="success">/look_job.jsp</result>
+			<result name="success">/parent/list_job.jsp</result>
 		</action>
 	</package>
 </struts>

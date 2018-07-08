@@ -77,7 +77,10 @@
 			</div>
 			<ul class="lg_tnav_wrap">
 				<li><a href="./index.jsp">首页</a></li>
-				<li><a href="./look_job.jsp">浏览职位</a></li>
+				<s:url action="ListJob" var="listjob">
+				
+				</s:url>
+				<li><a href="${listjob }">浏览职位</a></li>
 				<li><a rel="nofollow" href="./edit_bio.jsp" target="_blank">撰写简历</a></li>
 			</ul>
 		</div>

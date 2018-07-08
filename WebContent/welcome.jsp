@@ -22,6 +22,7 @@
 
 职位类表之前应该有分类
 <s:include value="./parent/content.jsp"></s:include>
+
 <s:include value="./parent/list_job.jsp"></s:include>
 <s:debug></s:debug>
 

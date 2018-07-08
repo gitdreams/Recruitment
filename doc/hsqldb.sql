@@ -44,3 +44,6 @@ low INTEGER,
 high INTEGER,
 profile VARCHAR(5096)
 );
+
+
+SELECT * FROM WORK WHERE TYPE  '*';
