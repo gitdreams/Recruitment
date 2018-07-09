@@ -46,7 +46,7 @@ public class WorkCont implements Cont{
 				work.setProfile(rs.getString("profile"));
 				work.setJobtime(rs.getString("jobtime"));
 				work.setCompany(rs.getString("company"));
-				work.setExperience(rs.getString("experience"));
+				work.setExperience(rs.getString("experence"));
 				work.setType(rs.getString("type"));
 				works.add(work);
 			}

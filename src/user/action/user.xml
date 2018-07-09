@@ -48,5 +48,29 @@
 			<result name="success">./index.jsp</result>
 		</action>
 	</package>
+	
+	<package name="business" extends="struts-default">
+		<action name="collection" class="user.action.CollectionWork">
+			<result name="success">/collection.jsp</result>
+		</action>
+		<action name="ListBio" class="user.action.ListBio">
+			<result name="success">/userbio.jsp</result>
+		</action>
+		<action name="lookbio" class="user.action.EditBio" method="lookBio">
+			<result name="input" type="chain">ListBio</result>
+			<result name="success">/lookselfbio.jsp</result>
+		</action>
+		<action name="getbio" class="user.action.EditBio" method="searchbio">
+			<result name="success">./lookselfbio.jsp</result>
+		</action>
+		<action name="editbio" class="user.action.EditBio" method="editbio">
+			<result name="input" type="chain">ListBio</result>
+			<result name="success" type="chain">ListBio</result>
+		</action>
+		<action name="delete" class="user.action.EditBio" method="delete">
+			<result name="input" type="chain">ListBio</result>
+			<result name="success" type="chain">ListBio</result>
+		</action>
+	</package>
 
 </struts>

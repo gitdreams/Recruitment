@@ -11,7 +11,8 @@
 				<result name="success">/post_job.jsp</result>
 			</action>
 			<action name="indexJob" class="company.action.JobType" method="searchCategory">
-				<result name="success">/welcome.jsp</result>
+				<result name="success" type="chain">ListJob</result>
+				<!-- type="redirectAction" -->
 			</action>
 			<action name="addJob" class="company.action.AddJob">
 				<result name="input">/post_job.jsp</result>
@@ -26,7 +27,9 @@
 	<package name="companyJobList" extends="struts-default">
 		<action name="ListJob" class="company.action.ListJob">
 			<result name="input">/index.jsp</result>
-			<result name="success">/parent/list_job.jsp</result>
+			<result name="userlook">/look_job.jsp</result>
+			<result name="companylook">/look_job.jsp</result>
+			<result name="success">/welcome.jsp</result>
 		</action>
 	</package>
 </struts>

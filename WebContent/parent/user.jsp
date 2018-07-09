@@ -31,25 +31,13 @@
 
 
 			<ul class="lg_tbar_r">
-				<!-- if has unread message, add class unreaded 
-				<li class="msg_dropdown"><a class="msg_group"
-					href="message.jsp" rel="nofollow"> 消息 <em
-						class="msg_amount hide" id="headMsgAmount"></em>
-				</a> <!-- <div class="lg_msg_popup">
-						<div class="lg_msg_pu_body" id="lgPopupMsgBody"></div>
-						<div class="lg_msg_pu_footer">
-							<a href="https://www.lagou.com/message/settingsdetail.html"
-								target="_blank" class="lg_msg_setting fl"><i
-								class="lg_msg_avatar setting_i"></i>&nbsp;</a> <a
-								href="https://www.lagou.com/message/msgdetail.html"
-								class="lg_msg_more fr">查看更多</a>
-						</div>
-					</div> --></li>-->
-				<li><a href="userbio.jsp" class="bl" rel="nofollow">我的简历</a></li>
+
+				<li><s:a href="ListBio" class="bl" rel="nofollow">我的简历</s:a></li>
 				<li><a href="delivery.jsp" class="bl" id="deliveryLink"
 					rel="nofollow">投递箱</a> <em class="noticeDot dn"
 					id="noticeDot_delivery"></em></li>
-				<li><a href="collection.jsp" class="bl" rel="nofollow">收藏夹</a></li>
+				<li>
+				<s:a href="collection" class="bl" rel="nofollow">收藏夹</s:a></li>
 
 				<a href="./edit_profile.jsp" rel="nofollow">帐号设置</a>
 

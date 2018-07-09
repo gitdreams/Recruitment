@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
-<%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -16,7 +16,7 @@
 
 </head>
 <body>
-<s:debug></s:debug>
+	<s:debug></s:debug>
 	<div class="layui-col-md12">
 		<div class="layui-card">
 			<div class="layui-card-header">企业对自己的职位的管理，头可以有职位名称，时间
@@ -24,14 +24,63 @@
 			<div class="layui-card-body">
 				企业职位内容
 
-				<s:iterator value="mapwork" var="map">
-					<h2>
-						<s:property value="key" />
-					</h2>
-					<s:iterator value="value" var="info">
-						<s:property value="#info.profile" />
-					</s:iterator>
-				</s:iterator>
+				<table class="layui-table" lay-even="" lay-skin="row">
+					<colgroup>
+						<col width="80">
+						<col width="150">
+						<col width="80">
+						<col width="80">
+						<col width="80">
+						<col width="80">
+						<col width="200">
+						<col width="80">
+						<col>
+					</colgroup>
+					<thead>
+						<tr>
+							<th>职位</th>
+							<th>公司</th>
+							<th>类型</th>
+							<th>经验</th>
+							<th>薪资</th>
+							<th>地点</th>
+							<th>简介</th>
+							<th>收藏 投递</th>
+						</tr>
+					</thead>
+					<tbody>
+						<s:iterator value="mapwork" var="map">
+							<tr>
+								<s:iterator value="value" var="info">
+									<td><s:property value="#info.work" /></td>
+									<td><s:property value="#info.company" /></td>
+									<td><s:property value="#info.type" /></td>
+									<td>
+								<s:property value="#info.experience" />
+									</td>
+									<td>
+									<s:property value="#info.low" />
+									-
+									<s:property value="#info.high" />
+									</td>
+									<td>
+									<s:property value="#info.location" />
+									</td>
+									<td>
+									<s:property value="#info.profile" />
+									</td>
+									<td> 
+									<s:url action="collection" var="col"></s:url>
+									<a href="${col}">收藏</a>
+									<s:url action="delivery" var="delivery"></s:url>
+									<a href="${delivery}">投递简历</a>
+									</td>
+									</s:iterator>
+							</tr>
+						</s:iterator>
+
+					</tbody>
+				</table>
 			</div>
 		</div>
 	</div>
