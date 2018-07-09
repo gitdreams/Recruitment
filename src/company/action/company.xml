@@ -7,21 +7,23 @@
 <struts>
 
 	<package name="company" extends="struts-default">
-			<action name="getJobType" class="company.action.JobType" method="secondlist">
-				<result name="success">/post_job.jsp</result>
-			</action>
-			<action name="indexJob" class="company.action.JobType" method="searchCategory">
-				<result name="success" type="chain">ListJob</result>
-				<!-- type="redirectAction" -->
-			</action>
-			<action name="addJob" class="company.action.AddJob">
-				<result name="input">/post_job.jsp</result>
-				<result name="success">/index.jsp</result>
-			</action>
-			<action name="CompanyInfo" class="company.action.EditInfo">
-				<result name="input">/edit_info.jsp</result>
-				<result name="success">/index.jsp</result>
-			</action> 
+		<action name="getJobType" class="company.action.JobType"
+			method="secondlist">
+			<result name="success">/post_job.jsp</result>
+		</action>
+		<action name="indexJob" class="company.action.JobType" method="searchCategory">
+			<result name="input">/index.jsp</result>
+			<result name="success" type="chain">ListJob</result>
+			<!-- type="redirectAction" -->
+		</action>
+		<action name="addJob" class="company.action.AddJob">
+			<result name="input">/post_job.jsp</result>
+			<result name="success">/index.jsp</result>
+		</action>
+		<action name="CompanyInfo" class="company.action.EditInfo">
+			<result name="input">/edit_info.jsp</result>
+			<result name="success">/index.jsp</result>
+		</action>
 	</package>
 
 	<package name="companyJobList" extends="struts-default">
@@ -32,11 +34,44 @@
 			<result name="success">/welcome.jsp</result>
 		</action>
 	</package>
-	
-	
+
+
 	<package name="companyBioList" extends="struts-default">
-		<action name="ListBio" class="company.action.ListBio">
+		<action name="ListCompanyBio" class="company.action.ListBio">
 			<result name="success">/look_bio.jsp</result>
+		</action>
+		<action name="companybio" class="company.action.ListBio"
+			method="oneBio">
+			<result name="success">/companylook.jsp</result>
+		</action>
+		<action name="onebio" class="user.action.EditBio" method="lookBio">
+			<result name="input">/index.jsp</result>
+			<result name="success">/companylook.jsp</result>
+		</action>
+		<action name="message" class="company.action.Message">
+			<result name="input" type="chain">ListCompanyBio</result>
+			<result name="success" type="chain">ListCompanyBio</result>
+		</action>
+		
+		<action name="managecompanyJob" class="company.action.ListJob" method="ListWork">
+			<result name="input">/index.jsp</result>
+			<result name="success">/manage_job.jsp</result>
+		</action>
+		
+		<action name="lookjob" class="company.action.ListJob" method="lookJob">
+			<result name="input" type="chain">managecompanyJob</result>
+			<result name="success">/companyjob.jsp</result>
+		</action>
+		<action name="editJob" class="company.action.ListJob" method="editjobs">
+			<result name="input" type="chain">managecompanyJob</result>
+			<result name="success" type="chain">managecompanyJob</result>
+		</action>
+		<action name="delete" class="company.action.ListJob" method="delete">
+			<result name="input" type="chain">managecompanyJob</result>
+			<result name="success" type="chain">managecompanyJob</result>
+		</action>
+		<action name="getwork" class="company.action.ListJob" method="searchjob">
+			<result name="success">/companyjob.jsp</result>
 		</action>
 	</package>
 </struts>

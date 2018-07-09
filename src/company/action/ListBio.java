@@ -17,6 +17,15 @@ import obj.domain.work;
 public class ListBio extends ActionSupport{
 
 	private Map<String, bio> mapbio;
+	private bio bio;
+	
+	public bio getBio() {
+		return bio;
+	}
+
+	public void setBio(bio bio) {
+		this.bio = bio;
+	}
 
 	public Map<String, bio> getMapbio() {
 		return mapbio;
@@ -44,5 +53,11 @@ public class ListBio extends ActionSupport{
 			this.mapbio.put(String.valueOf(bios.get(i).getId()), bios.get(i));
 		}
 		return "success";
+	}
+	
+	public String oneBio() {
+		String message = "input";
+		
+		return message;
 	}
 }

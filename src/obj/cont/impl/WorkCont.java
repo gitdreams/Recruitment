@@ -25,7 +25,7 @@ public class WorkCont implements Cont{
 				work = new work();
 				work.setId(rs.getInt("id"));
 				work.setWork(rs.getString("work"));
-				work.setLocation("location");
+				work.setLocation(rs.getString("location"));
 				work.setLow(rs.getInt("low"));
 				work.setHigh(rs.getInt("high"));
 				work.setProfile(rs.getString("profile"));
@@ -73,7 +73,9 @@ public class WorkCont implements Cont{
 	@Override
 	public int update(String sql, String[] str) {
 		// TODO Auto-generated method stub
-		return 0;
+		Dao dao = new DaoImpl();
+		int status = dao.update(sql, str);
+		return status;
 	}
 
 	public List getSetDB(String sql, String[] args) {

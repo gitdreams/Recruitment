@@ -68,3 +68,6 @@ DELETE FROM bio WHERE id=3;
 
 SELECT * FROM bio WHERE id IN (
 SELECT DISTINCT bio_id FROM delivery WHERE company='上海星环信息科技有限公司');
+
+
+select * from bio where id=6
