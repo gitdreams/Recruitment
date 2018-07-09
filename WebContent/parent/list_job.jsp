@@ -72,7 +72,9 @@
 									<td> 
 									<s:url action="collection" var="col"></s:url>
 									<a href="${col}">收藏</a>
-									<s:url action="delivery" var="delivery"></s:url>
+									<s:url action="getjobinfo" var="delivery">
+									<s:param name="work.company" value="#info.company"></s:param>
+									</s:url>
 									<a href="${delivery}">投递简历</a>
 									</td>
 									</s:iterator>

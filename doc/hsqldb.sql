@@ -57,11 +57,14 @@ SELECT * FROM WORK WHERE id in (SELECT jobid FROM collection WHERE userid=0);
 
 
 
-ALTER TABLE bio  ADD userid INTEGER;
+ALTER TABLE message  ADD userid INTEGER;
 
 SELECT * FROM USERs;
 SELECT * FROM bio WHERE userid=0;
 
 
 SELECT * FROM bio;
-DELETE FROM bio WHERE id=3
+DELETE FROM bio WHERE id=3;
+
+SELECT * FROM bio WHERE id IN (
+SELECT DISTINCT bio_id FROM delivery WHERE company='上海星环信息科技有限公司');

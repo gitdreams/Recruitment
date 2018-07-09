@@ -32,4 +32,11 @@
 			<result name="success">/welcome.jsp</result>
 		</action>
 	</package>
+	
+	
+	<package name="companyBioList" extends="struts-default">
+		<action name="ListBio" class="company.action.ListBio">
+			<result name="success">/look_bio.jsp</result>
+		</action>
+	</package>
 </struts>

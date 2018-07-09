@@ -33,8 +33,9 @@
 			<ul class="lg_tbar_r">
 
 				<li><s:a href="ListBio" class="bl" rel="nofollow">我的简历</s:a></li>
-				<li><a href="delivery.jsp" class="bl" id="deliveryLink"
-					rel="nofollow">投递箱</a> <em class="noticeDot dn"
+				<li><s:a href="ListMessage" class="bl" rel="nofollow">消息</s:a></li>
+				<li><s:a href="getallinfo" class="bl" id="deliveryLink"
+					rel="nofollow">投递箱</s:a> <em class="noticeDot dn"
 					id="noticeDot_delivery"></em></li>
 				<li>
 				<s:a href="collection" class="bl" rel="nofollow">收藏夹</s:a></li>

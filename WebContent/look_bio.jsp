@@ -12,7 +12,7 @@
 <body>
 <s:include value="./parent/company.jsp"></s:include>
 企业浏览简历
-
+<s:debug></s:debug>
 <div class="layui-col-md12">
       <div class="layui-card">
         <div class="layui-card-header">
