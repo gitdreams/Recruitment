@@ -40,7 +40,6 @@
 					id="noticeDot_delivery"></em></li>
 			</ul>
 
-
 		</div>
 	</div>
 
@@ -60,8 +59,8 @@
 				<li><a href="./index.jsp">首页</a></li>
 				<s:url action="getJobType" var="type"></s:url>
 				<li><a href="${type}">发布职位</a></li>
-				<li><a rel="nofollow" href="./look_bio.jsp" target="_blank">浏览简历</a></li>
-				<li><a rel="nofollow" href="./manage_job.jsp">职位管理</a></li>
+				<li><s:a rel="nofollow" href="ListCompanyBio" target="_blank">浏览简历</s:a></li>
+				<li><s:a rel="nofollow" href="managecompanyJob">职位管理</s:a></li>
 			</ul>
 		</div>
 	</div>

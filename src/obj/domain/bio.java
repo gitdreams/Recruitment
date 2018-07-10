@@ -12,6 +12,7 @@ package obj.domain;
 
 public class bio {
 
+	private int userid;
 	private int id;
 	private String job;
 	private String location;
@@ -27,6 +28,13 @@ public class bio {
 	private String type;
 	private String workTime;
 	
+	
+	public int getUserid() {
+		return userid;
+	}
+	public void setUserid(int userid) {
+		this.userid = userid;
+	}
 	public String getName() {
 		return name;
 	}

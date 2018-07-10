@@ -15,6 +15,14 @@ public class message {
 	private String company;
 	private int bio_id;
 	private String message;
+	private int userid;
+	
+	public int getUserid() {
+		return userid;
+	}
+	public void setUserid(int userid) {
+		this.userid = userid;
+	}
 	public int getId() {
 		return id;
 	}

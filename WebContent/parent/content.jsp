@@ -31,7 +31,7 @@
 										<s:property value="key" />
 									</h2>
 									<s:iterator value="value" var="second">
-									<s:action name="ListJob?jobType=#second" var="listjob"></s:action>
+									<s:action name="ListJob" var="listjob"></s:action>
 										<a href="${listjob }"> 
 										<s:property value="#second" />
 										</a>
@@ -44,7 +44,7 @@
 								<dl>
 									<dd>
 									<s:iterator value="value" var="job">
-									<s:action name="ListJob?jobType=#job" var="listjob"></s:action>
+									<s:action name="ListJob" var="listjob"></s:action>
 										<a href="${listjob }"> 
 										<s:property value="#job" />
 										</a>

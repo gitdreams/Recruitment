@@ -19,28 +19,34 @@
 </head>
 <body>
 	<s:include value="./parent/user.jsp"></s:include>
-	撰写简历
-
-
-	<form class="layui-form" action="AddBio">
+	浏览简历
+	<form class="layui-form" action="editbio">
+	<input name="bio.id" value="${bio.id }" type="hidden">
 		<div class="layui-inline">
 			<label class="layui-form-label">姓名</label>
 			<div class="layui-input-inline">
-				<input type="text" name="bio.name" autocomplete="off"
-					class="layui-input">
+				<input 
+				type="text" 
+				name="bio.name" 
+				autocomplete="off"
+				readonly="true" 
+				value="${bio.name}"
+				class="layui-input">
 			</div>
 		</div>
 		<div class="layui-inline">
 			<label class="layui-form-label">电话</label>
 			<div class="layui-input-inline">
-				<input type="text" name="bio.phone" autocomplete="off"
+				<input type="text" readonly="true" 
+				value="${bio.phone}" name="bio.phone" autocomplete="off"
 					class="layui-input">
 			</div>
 		</div>
 		<div class="layui-inline">
 			<label class="layui-form-label">专业学校</label>
 			<div class="layui-input-inline">
-				<input type="text" name="bio.school" autocomplete="off"
+				<input type="text" readonly="true" 
+				value="${bio.school}" name="bio.school" autocomplete="off"
 					class="layui-input">
 			</div>
 		</div>
@@ -48,29 +54,24 @@
 		<div class="layui-inline">
 			<label class="layui-form-label">邮箱</label>
 			<div class="layui-input-inline">
-				<input type="text" name="bio.email" lay-verify="email"
+				<input type="text" readonly="true" 
+				value="${bio.email}" name="bio.email" lay-verify="email"
 					autocomplete="off" class="layui-input">
 			</div>
 		</div>
-		<br>
-		<div class="layui-form-item">
-			<label class="layui-form-label">单选框</label>
-			<div class="layui-input-block">
-				<input type="radio" name="bio.sex" value="男" title="男" checked="">
-				<input type="radio" name="bio.sex" value="女" title="女">
-
-			</div>
-		</div>
+		<br><br>
 		<div class="layui-form-item">
 			<div class="layui-inline">
 				<label class="layui-form-label">薪资</label>
 				<div class="layui-input-inline" style="width: 100px;">
-					<input type="text" name="bio.low" placeholder="￥"
+					<input type="text"
+				value="${bio.low}" name="bio.low" placeholder="￥"
 						autocomplete="off" class="layui-input">
 				</div>
 				<div class="layui-form-mid">-</div>
 				<div class="layui-input-inline" style="width: 100px;">
-					<input type="text" name="bio.high" placeholder="￥"
+					<input type="text"
+				value="${bio.high}" name="bio.high" placeholder="￥"
 						autocomplete="off" class="layui-input">
 				</div>
 			</div>
@@ -78,7 +79,8 @@
 		<div class="layui-form-item">
 			<label class="layui-form-label">职位</label>
 			<div class="layui-input-block">
-				<input type="text" name="bio.job" required lay-verify="required"
+				<input type="text" readonly="true" 
+				value="${bio.job	}" name="bio.job" required lay-verify="required"
 					placeholder="请输入职位名称" autocomplete="off" class="layui-input">
 			</div>
 		</div>
@@ -86,7 +88,9 @@
 			<label class="layui-form-label">工作类型</label>
 			<div class="layui-input-block">
 				<select name="bio.type" lay-verify="required">
-					<option value=""></option>
+					<option value="${bio.type }">
+<s:property value="%{bio.type}"/>
+					</option>
 					<option value="实习生">实习生</option>
 					<option value="全职">全职</option>
 					<option value="暑假工">暑假工</option>
@@ -98,7 +102,9 @@
 			<label class="layui-form-label">工作地点</label>
 			<div class="layui-input-block">
 				<select name="bio.location" lay-verify="required" lay-search="">
-						<option value=""></option>
+						<option value="${bio.location }">
+<s:property value="%{bio.location}"/>
+					</option>
 						<option value="北京">北京</option>
 						<option value="上海">上海</option>
 						<option value="天津">天津</option>
@@ -139,7 +145,8 @@
 		<div class="layui-inline">
 			<label class="layui-form-label">到职日期</label>
 			<div class="layui-input-block">
-				<input type="text" name="bio.workTime" id="date" class="layui-input"
+				<input type="text" readonly="true" 
+				value="${bio.workTime}" name="bio.workTime" id="date" class="layui-input"
 					placeholder="yyyy-MM-dd" />
 			</div>
 		</div>
@@ -148,13 +155,14 @@
 			<label class="layui-form-label">个人简介</label>
 			<div class="layui-input-block">
 				<textarea name="bio.profile" placeholder="请输入内容"
-					class="layui-textarea"></textarea>
+					class="layui-textarea">
+<s:property value="%{bio.profile}"/>
+					</textarea>
 			</div>
 		</div>
 		<div class="layui-form-item">
 			<div class="layui-input-block">
-				<button class="layui-btn" lay-submit lay-filter="formDemo">立即发布</button>
-				<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+				<button class="layui-btn" lay-submit lay-filter="formDemo">提交修改</button>
 			</div>
 		</div>
 	</form>
