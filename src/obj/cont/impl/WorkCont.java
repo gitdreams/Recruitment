@@ -88,7 +88,7 @@ public class WorkCont implements Cont{
 				work work = new work();
 				work.setId(rs.getInt("id"));
 				work.setWork(rs.getString("work"));
-				work.setLocation("location");
+				work.setLocation(rs.getString("location"));
 				work.setLow(rs.getInt("low"));
 				work.setHigh(rs.getInt("high"));
 				work.setProfile(rs.getString("profile"));
