@@ -67,8 +67,8 @@ public class CollectionWork extends ActionSupport{
 		ActionContext act = ActionContext.getContext();
 		user user = (user)act.getSession().get("userobj");
 		String userid = String.valueOf(user.getId());
-		System.out.println("1111x1xx1");
-		System.out.println(jobid);
+//		System.out.println("1111x1xx1");
+//		System.out.println(jobid);
 		String[] args= {
 				userid,
 				String.valueOf(this.jobid)

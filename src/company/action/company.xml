@@ -33,6 +33,10 @@
 			<result name="companylook">/look_job.jsp</result>
 			<result name="success">/welcome.jsp</result>
 		</action>
+		<action name="typeJob" class="company.action.ListJob" method="typeJob">
+			<result name="input">/index.jsp</result>
+			<result name="success">/look_job.jsp</result>
+		</action>
 	</package>
 
 

@@ -31,8 +31,10 @@
 										<s:property value="key" />
 									</h2>
 									<s:iterator value="value" var="second">
-									<s:action name="ListJob" var="listjob"></s:action>
-										<a href="${listjob }"> 
+									<s:url action="typeJob" var="typeJob">
+									<s:param name="job.type" value="#second"></s:param>
+									</s:url>
+										<a href="${typeJob }"> 
 										<s:property value="#second" />
 										</a>
 										<i class="arrow"></i>
@@ -44,8 +46,10 @@
 								<dl>
 									<dd>
 									<s:iterator value="value" var="job">
-									<s:action name="ListJob" var="listjob"></s:action>
-										<a href="${listjob }"> 
+									<s:url action="typeJob" var="typeJob">
+									<s:param name="job.type" value="#job"></s:param>
+									</s:url>
+										<a href="${typeJob }"> 
 										<s:property value="#job" />
 										</a>
 										<i class="arrow"></i>
@@ -61,33 +65,17 @@
 			</div>
 		</div>
 
-
-
 	<script type="text/javascript"
 		src="//www.lgstatic.com/www/static/pkg/vendor_e3ddeee.js"></script>
-
-	<script type="text/javascript"
-		src="//www.lgstatic.com/www/static/pkg/index/page/index/main.html_aio_b1a1945.js"></script>
 	<script type="text/javascript"
 		src="//www.lgstatic.com/www/static/pkg/widgets_120b982.js"></script>
-	<script type="text/javascript"
-		src="//www.lgstatic.com/www/static/pkg/layout_32be855.js"></script>
 	<script type="text/javascript"
 		src="//www.lgstatic.com/www/static/pkg/index/page/index/main.html_aio_2_aa346e4.js"></script>
 	<script type="text/javascript">
 		window.global = window.global || {};
-		global.userCtx = 'com.lagou.entity.User@7605c3fa';
-		window.global = window.global || {};
-
-		require([ 'common/widgets/header_c/layout/main' ]);
-		require([ 'common/widgets/new_login_toolbar/main' ])
 		//业务主模块入口
 		require([ 'index/page/index/main' ]);
 	</script>
-	<script type="text/javascript"
-		src="//www.lgstatic.com/www/static/pkg/lg-analytics_ea85146.js"></script>
-	<script type="text/javascript"
-		src="https://www.lagou.com/upload/oss.js"></script>
 </body>
 </body>
 </html>

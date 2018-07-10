@@ -70,6 +70,24 @@ public class ListJob extends ActionSupport{
 		return "success";
 	}
 	
+	public String typeJob() {
+		String message = "input";
+		this.mapwork = new HashMap<String, work>();
+		WorkCont search = new WorkCont();
+		List<work> works = new ArrayList<work>();
+		String sql = "select * from work where type=?";
+		
+		String[] args = {
+				this.job.getType()
+		};
+		
+		works = search.getSetDB(sql, args);
+		for(int i=0; i<works.size(); i++) {
+			this.mapwork.put(String.valueOf(works.get(i).getId()), works.get(i));
+		}
+		return "success";
+	}
+	
 	public String ListWork() {
 		String message = "input";
 		this.mapwork = new HashMap<String, work>();
