@@ -70,7 +70,9 @@
 									<s:property value="#info.profile" />
 									</td>
 									<td> 
-									<s:url action="collection" var="col"></s:url>
+									<s:url action="addcollect" var="col">
+									<s:param name="jobid" value="#info.id"></s:param>
+									</s:url>
 									<a href="${col}">收藏</a>
 									<s:url action="getjobinfo" var="delivery">
 									<s:param name="work.company" value="#info.company"></s:param>

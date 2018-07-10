@@ -53,6 +53,10 @@
 		<action name="collection" class="user.action.CollectionWork">
 			<result name="success">/collection.jsp</result>
 		</action>
+		<action name="addcollect" class="user.action.CollectionWork" method="addcollect">
+			<result name="input">/index.jsp</result>
+			<result name="success" type="chain">collection</result>
+		</action>
 		<action name="ListBio" class="user.action.ListBio">
 			<result name="success">/userbio.jsp</result>
 		</action>
