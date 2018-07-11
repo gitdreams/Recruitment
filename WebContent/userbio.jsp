@@ -63,7 +63,7 @@
 									<s:url action="lookbio" var="lookbio">
 									<s:param name="bio.id" value="#info.id"></s:param>
 									</s:url>
-									<s:url action="delete" var="delete">
+									<s:url action="deletebio" var="delete">
 									<s:param name="bio.id" value="#info.id"></s:param>
 									</s:url>
 									<s:url action="getbio" var="editbio">
