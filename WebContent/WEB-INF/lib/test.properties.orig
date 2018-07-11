@@ -1,0 +1,9 @@
+#HSQL Database Engine 2.4.0
+<<<<<<< HEAD
+#Tue Jul 10 16:27:57 CST 2018
+=======
+#Tue Jul 10 21:42:20 CST 2018
+>>>>>>> a69fd3f0f94cb9802b449e74e3b45b1868bbfc4e
+version=2.4.0
+modified=yes
+tx_timestamp=0
