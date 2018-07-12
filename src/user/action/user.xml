@@ -71,7 +71,7 @@
 			<result name="input" type="chain">ListBio</result>
 			<result name="success" type="chain">ListBio</result>
 		</action>
-		<action name="delete" class="user.action.EditBio" method="delete">
+		<action name="deletebio" class="user.action.EditBio" method="delete">
 			<result name="input" type="chain">ListBio</result>
 			<result name="success" type="chain">ListBio</result>
 		</action>
